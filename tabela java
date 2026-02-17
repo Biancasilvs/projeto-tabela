@@ -1,0 +1,21 @@
+let saldo = 0;
+document.getElementById("formTransação").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const descricao = document.getElementById("descrição").value;
+    const valor = document.getElementById("valor").value;
+    const tipo = document.getElementById("tipo").value;
+    const data = document.getElementById("data").value;
+    if (tipo === "RECEITA") {
+        saldo += parseFloat(valor);
+    } else {
+        saldo -= parseFloat(valor);
+    }
+    document.getElementById("saldo").textContent = saldo.toFixed(2);
+});
+document.getElementById("saldo").innerText = saldo.toFixed(2);
+const lista = document.getElementById("listaTransações");
+const item = document.createElement("li");
+item.textContent = `${descricao} - R$${valor}`;
+lista.appendChild(item);
+lista.appendChild(item);
+document.getElementById("formTransação").reset();

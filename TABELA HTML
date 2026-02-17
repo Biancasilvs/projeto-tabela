@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> controle financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>controle financeiro</h1>
+    <form id="formtransação">
+        <input type="text" id="descrição" placeholder="descrição" required>
+        <input type="number" id="valor" placeholder="valor" required>
+        <select id="tipo">
+            <option value="RECEITA">receita
+            <option>
+            <option value="DESPESA">despesa/option>
+        </select>
+        <input type="date" id="data" required>
+        <button type="submit">adicionar</button>
+    </form>
+    <h2>saldo:R$<span id="saldo">0.00</span></h2>
+    <ul id="listatransações"></ul>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+>
